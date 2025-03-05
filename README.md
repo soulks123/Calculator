@@ -1,2 +1,40 @@
-# Calculator
-A calculator program typically allows the user to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. The core logic of a simple calculator is built using control structures (like loops and conditionals) and functions. 
+#include<iostream>
+using namespace std;
+int main()
+{
+ double num1,num2;
+ char operation;
+ cout<<"simple calculator"<<endl;
+ cout<<"-----------------"<<endl;
+ cout<<"enetr the first number:";
+ cin>>num1;
+ cout<<"enter an operator (+,-,*,/):";
+ cin>>operation;
+ cout<<"enter the second number:";
+ cin>>num2;
+ switch (operation)
+ {
+ 	case '+':
+ 		cout<<"result:"<<num1+num2<<endl;
+ 		break;
+ 		case '-':
+ 			cout<<"result:"<<num1-num2<<endl;
+ 			break;
+ 			case '*':
+ 				cout<<"result:"<<num1*num2<<endl;
+ 				break;
+ 				case '/':
+ 				if(num2 !=0)
+ 				{
+ 					cout<<"result:"<<num1/num2<<endl;
+				 }
+				 else
+				 {
+				 	cout<<"error: divison by zero is not allowed!"<<endl;
+				 }
+				 break;
+				 default:
+				 	cout<<"error: invaild operator!"<<endl;
+	 }	
+	 return 0;
+}
